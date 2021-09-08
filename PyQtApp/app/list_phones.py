@@ -256,8 +256,11 @@ class ListPhonesTable(QTableWidget):
                         )
                         if user:
                             user = tuple(user)[0]
+                            phone_user = user.phone.phone_id
                             self.session.delete(user)
+
                             self.session.commit()
+                            self.delete_phone(phone_num=phone_user)
                         continue
                     if check_any_fields:
                         msg.append(f'Не все обязательные поля заполнены {fullname}, {date_birth}, {phone_number} !')
@@ -375,6 +378,23 @@ class ListPhonesTable(QTableWidget):
                         )
                 self.need_clear = False
 
+
+    def delete_phone(self, phone_num):
+        """
+        Удаляет номер телефона
+        """
+        users = self.session.query(
+            Users).filter_by(
+            phone_id=phone_num
+        ).all()
+        if len(users) < 1:
+            phone = self.session.query(
+                Phone
+            ).filter_by(
+                phone_id=phone_num
+            ).one()
+            self.session.delete(phone)
+            self.session.commit()
 
     @staticmethod
     def insert_row(tab, index_row, fullname, phone_number, date_birth, need_setattr=False):
