@@ -44,3 +44,7 @@
 ![alt text](screenshots/reset.png "Описание будет тут")
 ![alt text](screenshots/list_phones.png "Описание будет тут")
 ![alt text](screenshots/user.png "Описание будет тут")
+
+Схема БД
+
+![alt text](screenshots/Shema.png "Описание будет тут")
