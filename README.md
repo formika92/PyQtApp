@@ -39,8 +39,8 @@
 
 Скриншоты:
 
-![alt text](.screenshots/filename.png "Описание будет тут")
-![alt text](.screenshots/reg.png "Описание будет тут")
-![alt text](.screenshots/reset.png "Описание будет тут")
-![alt text](.screenshots/list_phones.png "Описание будет тут")
-![alt text](.screenshots/user.png "Описание будет тут")
+![alt text](screenshots/filename.png "Описание будет тут")
+![alt text](screenshots/reg.png "Описание будет тут")
+![alt text](screenshots/reset.png "Описание будет тут")
+![alt text](screenshots/list_phones.png "Описание будет тут")
+![alt text](screenshots/user.png "Описание будет тут")
