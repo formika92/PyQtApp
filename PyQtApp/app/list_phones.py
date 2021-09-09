@@ -577,19 +577,20 @@ class ListPhonesWindow(QMainWindow):
             )
             if rows:
                 tab_obj = getattr(self, f'tab_{index+1}', None)
-                tab_obj.clearContents()
-                for r in range(tab_obj.rowCount()+1):
-                    tab_obj.removeRow(r)
-                tab_obj.setRowCount(20)
-                for index_row, data in enumerate(rows):
-                    tab_obj.insert_row(
-                        tab=tab_obj,
-                        index_row=index_row,
-                        fullname=data.fullname,
-                        phone_number=data.phone.number,
-                        date_birth=data.date_birth,
-                        need_setattr=True
-                    )
+                if tab_obj:
+                    tab_obj.clearContents()
+                    for r in range(tab_obj.rowCount()+1):
+                        tab_obj.removeRow(r)
+                    tab_obj.setRowCount(20)
+                    for index_row, data in enumerate(rows):
+                        tab_obj.insert_row(
+                            tab=tab_obj,
+                            index_row=index_row,
+                            fullname=data.fullname,
+                            phone_number=data.phone.number,
+                            date_birth=data.date_birth,
+                            need_setattr=True
+                        )
 
     def get_qs_users(self, model, filter_text):
         """

@@ -215,9 +215,6 @@ class LoginWindow(QWidget):
         self.show_pass_checkbox.stateChanged.connect(
             self.state_changed
         )
-        self.remember_checkbox.stateChanged.connect(
-            self.remember_user
-        )
 
         self.apply_btn.clicked.connect(
             self.show_list_phones_window
@@ -313,13 +310,6 @@ class LoginWindow(QWidget):
             self.input_pass.setEchoMode(
                 QtWidgets.QLineEdit.PasswordEchoOnEdit
             )
-
-    def remember_user(self):
-        """
-        Срабатывает при изменении состояния чекбокса "Запомнить меня"
-        """
-        if self.remember_checkbox.isChecked():
-            pass
 
     def show_win_reg_main(self):
         """
