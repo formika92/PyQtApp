@@ -47,7 +47,7 @@
 ![alt text](screenshots/reset.png "Описание будет тут")
 ![alt text](screenshots/list_phones.png "Описание будет тут")
 
-Открывается при нажатии на логин юзера.
+Открывается при нажатии на логин юзера. 
 ![alt text](screenshots/user.png "Описание будет тут")
 
 Схема БД
